@@ -4,10 +4,17 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
-<ul>
+<ul class="grid">
   <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
   {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  <li style="
+      list-style-type: none;
+      "><a style="text-decoration: none;" href="{{ page.permalink | safe }}"><article><header><h3> {{ page.title }}</h3></header>
+      adjadksadl
+      <footer>
+        {{ page.date }}
+      </footer>
+    </article></a></li>
   {% endfor %}
 </ul>
 {% endblock content %}
